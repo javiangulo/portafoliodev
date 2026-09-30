@@ -1,0 +1,12 @@
+# Cursor Rules for portafoliodev
+
+Always refer to and strictly follow the project conventions documented in AGENTS.md and .agents/rules/*.
+
+Key Rules:
+1. Package manager is pnpm. Do not use npm or yarn.
+2. Linter & Formatter is Biome (@biomejs/biome). Do not use or suggest ESLint/Prettier.
+   - Run `pnpm lint:fix` to resolve lint and format issues.
+   - Formatting: 2 spaces, single quotes for TS/JS, double quotes for JSX, no semicolons, ES5 trailing commas.
+3. Path aliases: Use `@/*` for imports from `src/`.
+4. Portfolio content: All profile, project, and experience data belongs in `src/config/portfolio.config.ts`, not hardcoded in components.
+5. SSR Safety: Modern.js uses SSR by default; ensure window/document access is guarded.
