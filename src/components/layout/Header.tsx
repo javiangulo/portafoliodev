@@ -18,7 +18,7 @@ export const Header = () => {
             {meta.siteName}
           </span>
           <span className="text-[11px] lg:text-xs font-mono px-2 py-0.5 rounded-md bg-surface-card border border-border text-muted hidden sm:inline font-medium">
-            template
+            v{meta.version}
           </span>
         </Link>
 

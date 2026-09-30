@@ -1,6 +1,13 @@
-# ⚡ portafolio.dev
+# ⚡ portafolio.dev `v1.0.0`
 
-> **Template minimalista, moderno y de alto rendimiento para desarrolladores de software.**  
+[![Version](https://img.shields.io/badge/release-v1.0.0-10b981.svg)](https://github.com)
+[![Modern.js](https://img.shields.io/badge/Modern.js-v3.9.3-0066ff.svg)](https://modernjs.dev)
+[![React](https://img.shields.io/badge/React-v19.3.0-61dafb.svg)](https://react.dev)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4.3.3-06b6d4.svg)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.9.3-3178c6.svg)](https://www.typescriptlang.org)
+[![Biome](https://img.shields.io/badge/Biome-v2.5.15-60a5fa.svg)](https://biomejs.dev)
+
+> **Template minimalista, moderno y de alto rendimiento para desarrolladores de software — Versión 1.0.0.**  
 > Construido con **Modern.js**, **React 19**, **TypeScript**, **Tailwind CSS v4** y **Biome**.
 
 ---

@@ -24,6 +24,7 @@ export interface ProjectItem {
 export interface PortfolioConfig {
   meta: {
     siteName: string
+    version: string
     title: string
     description: string
   }
@@ -46,7 +47,8 @@ export interface PortfolioConfig {
 export const PORTFOLIO_DATA: PortfolioConfig = {
   meta: {
     siteName: 'portafolio.dev',
-    title: 'portafolio.dev — Template Minimalista para Developers',
+    version: '1.0.0',
+    title: 'portafolio.dev — Template Minimalista para Developers (v1.0)',
     description:
       'Plantilla minimalista, centrada y optimizada para desarrolladores de software construida con Modern.js, React 19 y Tailwind CSS v4.',
   },
