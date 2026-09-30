@@ -1,0 +1,40 @@
+/* src/styles/tailwind.css
+ * Tailwind CSS v4 — Configuración CSS-first
+ */
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@custom-variant dark (
+  &:where(.dark-theme, .dark-theme *, [data-theme="dark"], [data-theme="dark"] *)
+);
+
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+
+  --color-primary: var(--primary-color);
+  --color-primary-text: var(--primary-color-text);
+  --color-surface-ground: var(--surface-ground);
+  --color-surface-card: var(--surface-card);
+  --color-surface-border: var(--surface-border);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-app: var(--app-bg);
+  --color-card: var(--card-bg);
+  --color-sidebar: var(--sidebar-bg);
+  --color-header: var(--header-bg);
+  --color-input: var(--input-bg);
+  --color-heading: var(--heading-color);
+  --color-body: var(--body-color);
+  --color-muted: var(--muted-color);
+  --color-border: var(--border-color);
+
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  --radius: var(--border-radius);
+}

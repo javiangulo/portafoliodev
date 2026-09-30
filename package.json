@@ -1,0 +1,40 @@
+{
+  "name": "portafoliodev",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "modern dev",
+    "build": "modern build",
+    "start": "modern start",
+    "serve": "modern serve",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "clean": "rimraf dist .modern.js node_modules",
+    "reset": "rimraf node_modules pnpm-lock.yaml && pnpm install"
+  },
+  "engines": {
+    "node": ">=22.x"
+  },
+  "packageManager": "pnpm@12.5.1",
+  "dependencies": {
+    "@modern-js/runtime": "^3.9.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@modern-js/app-tools": "^3.9.3",
+    "@modern-js/tsconfig": "^3.9.3",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "rimraf": "^6.0.1",
+    "sass": "^1.85.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}

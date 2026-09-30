@@ -1,0 +1,47 @@
+.DS_Store
+
+.pnp
+.pnp.js
+.env.local
+.env.*.local
+.history
+*.log*
+
+node_modules/
+*.tsbuildinfo
+
+dist/
+coverage/
+release/
+.output/
+output/
+output_resource/
+log/
+.modern.js/
+
+.vscode/**/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+**/*/typings/auto-generated
+modern.config.local.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Package lock files to exclude (pnpm is the source of truth)
+package-lock.json
+
+# Docker / Deploy
+deploy/
+
+# Tests
+/test-results
+coverage/
+test-report.xml
+
+# Env files
+.env
+!.env.default

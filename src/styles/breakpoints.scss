@@ -1,0 +1,101 @@
+@use "sass:map";
+
+// Breakpoints móvil-first
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// Mixins para media queries móvil-first
+@mixin media-up($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+    @if $value > 0 {
+      @media (min-width: $value) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` no encontrado en $breakpoints.";
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+    @if $value > 0 {
+      @media (max-width: #{$value - 1px}) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` no encontrado en $breakpoints.";
+  }
+}
+
+@mixin media-between($lower, $upper) {
+  @if map.has-key($breakpoints, $lower) and map.has-key($breakpoints, $upper) {
+    $lower-value: map.get($breakpoints, $lower);
+    $upper-value: map.get($breakpoints, $upper);
+
+    @media (min-width: #{$lower-value}) and (max-width: #{$upper-value - 1px}) {
+      @content;
+    }
+  } @else {
+    @warn "Uno o ambos breakpoints no encontrados en $breakpoints.";
+  }
+}
+
+@mixin container-responsive {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-up(sm) {
+    max-width: 540px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @include media-up(md) {
+    max-width: 720px;
+  }
+
+  @include media-up(lg) {
+    max-width: 960px;
+  }
+
+  @include media-up(xl) {
+    max-width: 1140px;
+  }
+
+  @include media-up(xxl) {
+    max-width: 1320px;
+  }
+}
+
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
